@@ -1,0 +1,9 @@
+body {
+    background-color: blue;
+}
+
+#root {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
