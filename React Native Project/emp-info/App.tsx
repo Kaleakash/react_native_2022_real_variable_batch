@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
+import EmployeeDetails from './component/EmployeeDetails';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.textContent}>Employee Details</Text>
+      <EmployeeDetails></EmployeeDetails>
     </View>
   );
 }
@@ -17,4 +18,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textContent: {
+    fontSize:20,
+    fontWeight:'bold',
+    color:'#ffabbc'
+  }
 });
