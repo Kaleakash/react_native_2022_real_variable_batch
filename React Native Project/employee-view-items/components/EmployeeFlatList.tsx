@@ -23,8 +23,11 @@ export default function EmployeeFlatList() {
         {id:19,name:"Rajev",age:24},
         {id:20,name:"Raghu",age:29}
     ])
-    const deleteItem=()=> {
-        console.log("event fired...");
+    const deleteItem=(id:number)=> {
+        //console.log("event fired..."+id);
+        setEmployee(()=> {
+                return employees.filter(emp=>emp.id!= id);
+        })
     }
     return(
         <View>
@@ -35,9 +38,9 @@ export default function EmployeeFlatList() {
          return <View>
                 {/* <Button title="click here" onPress={()=>{}} color={"red"}></Button>
                 <TouchableOpacity><Text style={styles.myButton}>Click Here</Text></TouchableOpacity> */}
-                <TouchableOpacity onPress={()=>deleteItem()} activeOpacity={0.2} delayLongPress={50} 
+                <TouchableOpacity onPress={()=>deleteItem(emp.item.id)} activeOpacity={0.2} delayLongPress={50} 
                 style={styles.myButton}>
-                    <Text style={styles.subContainer}>Id is {emp.item.id} Name {emp.item.name} Age is {emp.item.age}</Text>
+            <Text style={styles.subContainer}>Id is {emp.item.id} Name {emp.item.name} Age is {emp.item.age}</Text>
                 </TouchableOpacity>
                  </View>       
          
