@@ -5,13 +5,10 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'center',
-      marginTop:100
-      
+      justifyContent: 'center'  
     },
     inputView: {
-      //flex:1,
-      flexDirection:'row',
+      //flexDirection:'row',
       borderWidth:2,
       paddingTop:5,
       borderColor:"red",
