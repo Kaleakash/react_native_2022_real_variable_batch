@@ -6,7 +6,7 @@ import DeleteTask from "./DeleteTask";
 
 export default function DisplayTask(props:any) {
 
-    const deleteTask= (data:any)=> {
+    const localdeleteTask= (data:any)=> {
         props.deleteTask(data);
     }
     return(
@@ -18,8 +18,8 @@ export default function DisplayTask(props:any) {
              }}
         renderItem={(tt)=> {
 return  <View style={styles.task}>
-             <TouchableOpacity onPress={()=>deleteTask(tt.item)}>
-             <Text >{tt.item}</Text>
+             <TouchableOpacity onPress={()=>localdeleteTask(tt.item)}>
+                    <Text >{tt.item}</Text>
              </TouchableOpacity>
             
             {/* <DeleteTask deleteTask = {props.taskDetails} deleteItemInfo={tt.item} ></DeleteTask>     */}

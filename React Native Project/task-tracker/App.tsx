@@ -5,7 +5,7 @@ import styles from './styles/baseStyle';
 import DisplayTask from './components/DisplayTask';
 export default function App() {
   const [tasks,setTask]=useState<string[]>([]);
-  
+
   const receiveAddTaskValue=(tasks:string[])=> {
       setTask(tasks);
   }
@@ -20,6 +20,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
             <AddTask passTaskToParent={receiveAddTaskValue}></AddTask>
             <DisplayTask taskDetails={tasks} deleteTask={deletTaskReceive}></DisplayTask>
+            
     </SafeAreaView> 
   );
 }
