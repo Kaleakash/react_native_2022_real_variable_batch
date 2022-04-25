@@ -1,11 +1,11 @@
 
 
-export const increment = ()=> ({
-    type:"INCREMENT"
+export const increment = (data:number)=> ({
+    type:"INCREMENT",payload:data
 })
 
-export const decrement = ()=> ({
-    type:"DECREMENT"
+export const decrement = (data:number)=> ({
+    type:"DECREMENT",payload:data
 })
 
 

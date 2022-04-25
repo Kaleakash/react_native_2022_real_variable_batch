@@ -1,14 +1,12 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { connect } from "react-redux";
-import { increment,decrement } from "../redux/action/numAction";
-import Decrement from "./Decrement";
-import Increment from "./Increment";
+import { increment} from "../redux/action/numAction";
 function NumComponent(props:any){
     return(
         <View>
-            <Increment></Increment>
-            <Text style={styles.text}>Value of Num is {props.obj.num}</Text>
-            <Decrement></Decrement>
+            <TouchableOpacity onPress={()=>props.incrementNum(100)}>
+                <Text style={styles.text}>+</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -23,9 +21,6 @@ const mapDispatchToProps = (dispatch:any)=> {
     return {
         incrementNum : (num:number)=> {
             dispatch(increment(num))               // dispath the action 
-        },
-        decrementNum : (num:number)=> {
-            dispatch(decrement(num))               // dispatch the action 
         }
     }
 }
